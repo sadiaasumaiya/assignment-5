@@ -7,18 +7,37 @@ document.getElementById('donation-btn1').addEventListener('click', function () {
     const totalFundAmount = getFundAmount('fund1');
     const fund1 = totalFundAmount + donationNoa;
     const newBalance1 = mainBalance1 - donationNoa;
-
-    const div = document.createElement('div');
-    div.innerHTML = `
-    <h3 class="font-base font-semibold">${donationNoa} Taka is Donated for flood at Noakhali, Bangladesh <h3>;
-    const date = new Date();
-    console.log(date);
-    `
-    console.log(div);
-    document.getElementById('history-section').appendChild(div);
     document.getElementById('fund1').innerText = fund1;
     document.getElementById('main-balance').innerText = newBalance1;
-    
+
+
+    // Validation
+
+    if (donationNoa > mainBalance1) {
+        alert('You do not have sufficient balance');
+        return;
+    }
+
+    if (isNaN(donationNoa) || donationNoa <= 0) {
+        alert('Please enter a valid amount');
+        return;
+    }
+    else {
+        alert('You have donated for humankind')
+    }
+
+    // History section
+
+    const history = document.createElement('div');
+    history.className = "bg-white p-4 rounded-md border-2 border-gray-300 mb-4 shadow-lg";
+    history.innerHTML = `
+    <p class="text-lg text-gray-500"> <span class="font-bold">${donationNoa} </span> Taka is Donated for flood at Noakhali, Bangladesh </p>;
+    <p class="text-md text-gray-400 p-3 rounded-md"> ${new Date().toLocaleTimeString} </p>
+    `
+    document.getElementById('history-section').append(history);
+
+
+
     console.log(p);
     console.log('balance', newBalance1)
     console.log('fund', fund1)
