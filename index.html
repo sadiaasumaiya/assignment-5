@@ -22,7 +22,7 @@
 </head>
 
 <body class="lexend">
-    <header>
+    <header class="sticky top-0 backdrop-blur-md opacity-90">
         <!-- Navbar design start -->
 
         <nav
@@ -43,16 +43,16 @@
         <!-- Donation & History Button Here -->
 
         <div class="flex justify-center mb-5 lg:mb-8 max-w-6xl mx-auto">
-            <button class="bg-lime-300 px-5 py-3 font-semibold rounded-lg text-base lg:text-xl mr-3">Donation</button>
-            <button
+            <button id="donation-btn" class="bg-lime-300 px-5 py-3 font-semibold rounded-lg text-base lg:text-xl mr-3">Donation</button>
+            <button id="history-btn"
                 class="text-slate-500 px-5 py-3 border border-slate-400 font-medium rounded-lg text-base lg:text-xl">History</button>
         </div>
     </header>
 
     <!-- Main Section Start -->
 
-    <main class="max-w-6xl mx-auto mt-5 lg:mt-10">
-        <div>
+    <main>
+        <div id="donation-section" class="max-w-6xl mx-auto mt-5 lg:mt-10">
             <!-- 1st Card -->
             <div
                 class="flex flex-col lg:flex-row lg:items-center justify-center w-full mx-auto shadow-md rounded-lg p-8">
@@ -139,12 +139,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- History Section -->
+
+        <div id="histoy-section" class="shadow-md">
+            
+        </div>
     </main>
 
     <!-- Script Files -->
 
     <script src="js/utilities.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/histoy.js"></script>
 
     <!-- Main Section End -->
 

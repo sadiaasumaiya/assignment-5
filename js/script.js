@@ -8,9 +8,18 @@ document.getElementById('donation-btn1').addEventListener('click', function () {
     const fund1 = totalFundAmount + donationNoa;
     const newBalance1 = mainBalance1 - donationNoa;
 
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <h3 class="font-base font-semibold">${donationNoa} Taka is Donated for flood at Noakhali, Bangladesh <h3>;
+    const date = new Date();
+    console.log(date);
+    `
+    console.log(div);
+    document.getElementById('history-section').appendChild(div);
     document.getElementById('fund1').innerText = fund1;
     document.getElementById('main-balance').innerText = newBalance1;
-
+    
+    console.log(p);
     console.log('balance', newBalance1)
     console.log('fund', fund1)
 
@@ -51,12 +60,3 @@ document.getElementById('donation-btn3').addEventListener('click', function () {
 
 })
 
-
-// Validation in input field
-
-
-
-//Decrease actual amount after donation
-
-// const mainBalance = getActualAmount('main-balance');
-// const newBalance = mainBalance - donationNoa;
