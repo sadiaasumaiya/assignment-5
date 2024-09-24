@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
-    <title>Blog</title>
-    
-</head>
-<body class="bg-gray-100 p-4">
 
+
+</head>
+
+
+<body class="lexend p-4">
+
+    <header>
+        <!-- Navbar design start -->
+
+        <nav
+            class="flex flex-col md:flex-row gap-y-3 items-center md:justify-around bg-red-50 p-5 mb-10 lg:mb-20 max-w-7xl mx-auto">
+            <a href="index.html" class="font-bold text-base lg:text-xl bg-lime-300 px-5 py-2 rounded-lg">Home</a>
+            <div class="flex items-center gap-x-2">
+                <img src="assets/coin.png" alt="">
+                <h3 class="font-bold text-base lg:text-xl">Donate Bangladesh</h3>
+            </div>
+            <div class="flex items-center gap-x-2">
+                <img src="assets/coin.png" alt="">
+                <p id="main-balance" class="font-medium text-slate-600 text-base lg:text-xl">5500 BDT</p>
+            </div>
+        </nav>
+
+        <!-- Navbar Design End -->
+    </header>
+
+<main>
     <h1 class="text-2xl font-bold mb-4">Important FAQ</h1>
     <div class="bg-white p-4 rounded-lg shadow-md">
         <div class="collapse">
@@ -18,7 +42,8 @@
                 1. What is the Document Object Model (DOM)?
             </div>
             <div class="collapse-content">
-                <p>The DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects.</p>
+                <p>The DOM is a programming interface for web documents. It represents the structure of a document as a
+                    tree of objects.</p>
             </div>
         </div>
 
@@ -28,7 +53,8 @@
                 2. How do you select an element from the DOM?
             </div>
             <div class="collapse-content">
-                <p>You can select an element using methods like <code>getElementById</code>, <code>querySelector</code>, or <code>getElementsByClassName</code>.</p>
+                <p>You can select an element using methods like <code>getElementById</code>, <code>querySelector</code>,
+                    or <code>getElementsByClassName</code>.</p>
             </div>
         </div>
 
@@ -38,7 +64,9 @@
                 3. What is event delegation in the context of the DOM, and why is it useful?
             </div>
             <div class="collapse-content">
-                <p>Event delegation is a technique that allows you to add a single event listener to a parent element to manage events for multiple child elements. It’s useful for improving performance and managing dynamically added elements.</p>
+                <p>Event delegation is a technique that allows you to add a single event listener to a parent element to
+                    manage events for multiple child elements. It’s useful for improving performance and managing
+                    dynamically added elements.</p>
             </div>
         </div>
 
@@ -48,10 +76,14 @@
                 4. How do you manipulate an element's attributes and styles using the DOM?
             </div>
             <div class="collapse-content">
-                <p>You can use properties like <code>element.style</code> to change styles and <code>element.setAttribute</code> to change attributes.</p>
+                <p>You can use properties like <code>element.style</code> to change styles and
+                    <code>element.setAttribute</code> to change attributes.</p>
             </div>
         </div>
     </div>
 
+</main>
+    
 </body>
+
 </html>
