@@ -13,7 +13,3 @@ document.getElementById('donation-btn').addEventListener('click', function(){
 })
 
 
-// if(showSection === 'history-section'){
-//     ('history-btn').add.classList
-// }
-// const historyBtn = document.getElementById('history-btn').classList.add('bg-lime-300')

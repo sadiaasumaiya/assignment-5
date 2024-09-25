@@ -50,15 +50,20 @@
 
             <!-- Modal -->
             <!-- Open the modal using ID.showModal() method -->
-            <button id="modal.btn" class="btn" onclick="my_modal_1.showModal()">open modal</button>
+            <button id="modal.btn" class="btn hidden" onclick="my_modal_1.showModal()">open modal</button>
             <dialog id="my_modal_1" class="modal">
-                <div class="modal-box">
-                    <h3 class="text-lg font-bold">Hello!</h3>
-                    <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-box flex flex-col items-center p-8 rounded-md">
+                    <h3 class="text-3xl text-center font-bold">Congrats!</h3>
+                    <br>
+                    <img src="assets/coin.png" alt="">
+                    <br>
+                    <p class="py-4 text-gray-400">You Have Donated For Humankind</p>
+                    
+                    <p class="font-bold text-lg mb-5">Successfully</p>
                     <div class="modal-action">
                         <form method="dialog">
                          
-                            <button class="btn">Close</button>
+                            <button class="btn bg-slate-100 rounded-md px-4 py-2">Close confirmation</button>
                         </form>
                     </div>
                 </div>

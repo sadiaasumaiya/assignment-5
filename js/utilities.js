@@ -30,8 +30,4 @@ function showSection(id){
     document.getElementById(id).classList.remove('hidden');
 }
 // 
-// Modal
 
-function myModal(){
-    document.getElementById('modal.btn')
-}
