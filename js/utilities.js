@@ -29,4 +29,9 @@ function showSection(id){
     document.getElementById('history-section').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
+// 
+// Modal
 
+function myModal(){
+    document.getElementById('modal.btn')
+}

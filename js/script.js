@@ -15,9 +15,7 @@ document.getElementById('donation-btn1').addEventListener('click', function () {
     if (donationNoa > mainBalance1) {
         alert('You do not have sufficient balance');
         return;
-    } else {
-        alert('You have donated for humankind');
-    }
+    } 
 
     // Update amounts
     const fund1 = totalFundAmount + donationNoa;
@@ -39,6 +37,11 @@ document.getElementById('donation-btn1').addEventListener('click', function () {
 `;
 
     document.getElementById('history-section').appendChild(history);
+
+
+    // show modal
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
 });
 
 
@@ -59,9 +62,7 @@ document.getElementById('donation-btn2').addEventListener('click', function () {
     if (donationFeni > mainBalance2) {
         alert('You do not have sufficient balance');
         return;
-    } else {
-        alert('You have donated for humankind');
-    }
+    } 
 
     // Update amounts
     const fund2 = totalFundAmountFeni + donationFeni;
@@ -84,6 +85,10 @@ document.getElementById('donation-btn2').addEventListener('click', function () {
     `;
     document.getElementById('history-section').appendChild(historyEntry);
 
+    // show modal
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
+
 
 });
 
@@ -103,9 +108,9 @@ document.getElementById('donation-btn3').addEventListener('click', function () {
         alert('You do not have sufficient balance');
         return;
     }
-    else {
-        alert('You have donated for humankind');
-    }
+    
+
+
     // Update amounts
     const fund3 = totalFundAmountQuota + donationQuota;
     const newBalance3 = mainBalance3 - donationQuota;
@@ -126,5 +131,38 @@ document.getElementById('donation-btn3').addEventListener('click', function () {
         <p class="text-md text-gray-400 p-3 rounded-md">${formattedDate}</p>
     `;
     document.getElementById('history-section').appendChild(historyEntry);
+
+    // show modal
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
 });
 
+
+// Modal
+
+const modal = document.getElementById('my_modal_1');
+    const modalBtn = document.getElementById('modalBtn');
+
+    // Function to open the modal
+    modalBtn.onclick = function() {
+        modal.showModal();
+    };
+
+    // Close the modal when the close button is clicked
+    modal.addEventListener('close', () => {
+        console.log('Modal closed');
+    });
+
+    // Close the modal when clicking outside of it
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
+
+    // Close the modal when the ESC key is pressed
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            modal.close();
+        }
+    });
